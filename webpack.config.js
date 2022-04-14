@@ -11,13 +11,13 @@ module.exports = (env, argv) => {
       commonjs: 'aframe',
       commonjs2: 'aframe',
       amd: 'aframe',
-      root: 'AFRAME' // indicates global variable
+      root: 'AFRAME'
     },
     three: {
       commonjs: 'three',
       commonjs2: 'three',
       amd: 'three',
-      root: 'THREE' // indicates global variable
+      root: 'THREE'
     }
   };
   const module = {
@@ -111,7 +111,7 @@ module.exports = (env, argv) => {
       commonjs: 'three',
       commonjs2: 'three',
       amd: 'three',
-      root: 'THREE' // indicates global variable
+      root: 'THREE'
       }
     }
   },
@@ -132,7 +132,7 @@ module.exports = (env, argv) => {
       commonjs: 'three',
       commonjs2: 'three',
       amd: 'three',
-      root: 'THREE' // indicates global variable
+      root: 'THREE' 
       }
     }
   },
@@ -159,7 +159,7 @@ module.exports = (env, argv) => {
       commonjs: 'three',
       commonjs2: 'three',
       amd: 'three',
-      root: 'THREE' // indicates global variable
+      root: 'THREE'
       }
     }
   }
