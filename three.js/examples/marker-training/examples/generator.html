@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<title>AR.js Marker Training</title>
+<title>Генератор маркеров</title>
 <!-- include mdl -->
 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
 <link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css'>
@@ -7,11 +7,9 @@
 <script src='https://unpkg.com/dialog-polyfill@0.5.6/dist/dialog-polyfill.js'></script>
 <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
 
-<!-- Include pdfMake - http://pdfmake.org/ -->
 <script src='../../vendor/pdfMake/pdfmake.min.js'></script>
 <script src='../../vendor/pdfMake/vfs_fonts.js'></script>
 
-<!-- include THREEx.ArPatternFile -->
 <script src='../threex-arpatternfile.js'></script>
 
 <style media='screen'>
@@ -47,22 +45,19 @@
 </style>
 <body>
 
-<h1><a href='https://github.com/jeromeetienne/ar.js' target='_blank'>AR.js</a> Marker Training</h1>
+<h1>Генератор маркеров</h1>
 
 
 
-<!-- *********************************************************************** -->
-<!-- *********************************************************************** -->
-<!-- *********************************************************************** -->
 <div id='topRightButtons'>
 	<button id="show-info" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
 		<i class="material-icons">info_outline</i>
 	</button>
 </div>
 <dialog style='width:400px' id='dialog-info' class="mdl-dialog">
-	<h4 class="mdl-dialog__title">Welcome!</h4>
+	<h4 class="mdl-dialog__title">Добро пожаловать!</h4>
 	<div class="mdl-dialog__content">
-		Details on how to pick the inner image can be found <a target='_blank' href='https://kalwalt.github.io/artoolkit-docs/3_Marker_Training/marker_training.html'>here</a>
+		Подробности о том, как выбрать внутреннее изображение, можно найти <a target='_blank' href='https://kalwalt.github.io/artoolkit-docs/3_Marker_Training/marker_training.html'>здесь</a>
 	</div>
 	<div class="mdl-dialog__actions">
 		<button type="button" class="mdl-button">OK</button>
@@ -83,17 +78,15 @@
 	})
 </script>
 
-<!-- *********************************************************************** -->
-<!-- *********************************************************************** -->
-<!-- *********************************************************************** -->
+
 <div class='mdl-grid'>
 	<div class='mdl-cell mdl-cell--4-col'>
 		<label id='buttonUpload' for='fileinput' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
 			<input type='file' id='fileinput' style='display: none'>
-			Upload
+			загрузить
 		</label>
 		<div class='mdl-tooltip' for='buttonUpload'>
-			Upload the image to put inside the marker
+			Загрузить изображение для размещения внутри маркера
 		</div>
 
 		<div style="justify-content: center" class='mdl-grid'>
@@ -305,9 +298,6 @@
 		})
 	}
 
-	//////////////////////////////////////////////////////////////////////////////
-	//		Handle PDF
-	//////////////////////////////////////////////////////////////////////////////
 	document.querySelector('#buttonDownloadPDFOnePerPage').addEventListener('click', generatePdfOnePerPage)
 	document.querySelector('#buttonDownloadPDFTwoPerPage').addEventListener('click', generatePdfTwoPerPage)
 	document.querySelector('#buttonDownloadPDFSixPerPage').addEventListener('click', generatePdfSixPerPage)
